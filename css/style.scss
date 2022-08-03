@@ -1,0 +1,484 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+/*Start dane*/
+$h1: 3rem;
+$h2: 2rem;
+$h3: 4rem;
+$default-text-size: 2.4rem;
+$a: 1.8rem;
+$nav-background: rgb(7, 133, 133);
+$nav-color: rgb(212, 175, 50);
+$background: #0b9164;
+$background-hover: #8aa31c;
+/*End dane*/
+
+*{
+   margin: 0;
+   padding: 0;
+   font-family: 'Acme', sans-serif;
+}
+
+.hidden{
+   display: none;
+   overflow: hidden;
+}
+
+.error{
+   font-size: $h2;
+   padding: 1rem;
+   text-align: center;
+   color: $background;
+   font-weight: bold;
+}
+
+button:hover{
+   background: $background-hover;
+}
+
+/* Start panel główny */
+.start-panel{
+   background: url('../img/rec_gtav32.jpg') no-repeat fixed center;
+   background-size: 100% auto;
+
+   #login-panel, #register-panel{
+      border-radius: 0.4rem;
+      background: rgba(36, 40, 44, 0.9);
+      padding: 3rem 2rem;
+      position: absolute;
+      width: 35%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+   
+      h1{
+         font-size: $h1;
+         margin-bottom: 1rem;
+         text-align: center;
+         font-weight: 2rem;
+         color: #fff;
+      }
+   
+      .buttons-center{
+         text-align: center;
+         margin-top: 1rem;
+   
+         .input-text{
+            border-radius: 0.4rem;
+            width: 90%;
+            margin: 0.6rem auto;
+            padding: 0.5rem;
+            font-size: $default-text-size;
+         }
+   
+         .input-button{
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            font-size: $default-text-size;
+            border-radius: 0.4rem;
+            cursor: pointer;
+            border: none;
+            color: #fff;
+            background: $background;
+         }
+   
+         .input-button:hover{
+            background: $background-hover;
+         }
+      }
+   }
+}
+/* End panel główny */
+
+/* Start nav */
+nav{
+   background: $nav-background;
+   color: $nav-color;
+   padding: 2rem;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-grow: initial;  
+   font-family: garamond;
+   text-shadow: rgb(117, 87, 4) 2px 1px 1px;	
+
+   i{
+      font-size: $a;
+   }
+
+   .back{
+      flex-grow: 30;
+   }
+
+   .logo{
+      text-align: center;
+         margin-right: 27%;
+      font-size: $h3;   
+      font-family: Impact ;
+      text-shadow: rgb(117, 87, 4) 2px 1px 1px;	
+   }
+
+   .user{
+      text-align: right;
+      flex-grow: 1;      
+      margin-right: 4%;
+   }
+
+   .back a, .user a{
+      font-size: $a;
+      text-decoration: none;
+      color: $nav-color;
+      font-weight: bold;
+   }
+
+   .user > :hover, .back > a:hover{
+      color: #fff;
+   } 
+}
+
+/*End nav */
+
+main{   
+   font-size: 2.4rem;
+   width: 80%;
+   margin: 2rem auto 0;
+   text-align: center;
+   
+    .add_vehicle{
+      text-decoration: none;
+   
+      button{
+         font-size: $h2;
+         display: block;
+         margin: 0 auto;
+         padding: 1rem 1.5rem;
+         border-radius: 0.4rem;
+         cursor: pointer;
+         border: none;
+         color: rgb(209, 178, 38);
+         background: $background;
+      }
+
+      button:hover{
+         background: $background-hover;      }
+   }
+
+   input{
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+      padding: 1rem;      
+   }
+
+   .fas{
+      color: $background;
+   }
+
+   .fas:hover{
+      color: $background-hover;
+   }
+}
+
+#new_comment{
+   padding: 0.2rem;
+   margin-top: 1rem;
+   font-size: $default-text-size;
+   width: 100%; 
+   height: 8rem;
+}
+
+.buttons-center{  
+
+   .button{
+      font-size: $h2;
+      display: block;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      border-radius: 0.4rem;
+      cursor: pointer;
+    
+      border: none;
+      color: $nav-color;
+      background: $background;
+   }
+   
+   
+   #wynajmij, #wstaw{
+      font-size: $h2;
+      display: block;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      border-radius: 0.4rem;
+      cursor: pointer;
+      border: none;
+      color: #fff;
+      background: $background;
+   }
+
+   #wynajmij:hover, #wstaw:hover{
+      background: $background-hover;      
+   }
+
+   #wstaw{
+      margin-top: 1rem;
+   }
+}
+
+.parent {
+   margin-top: 2rem;
+   display: grid;
+   grid-template-columns: repeat(12, 1fr);
+   grid-template-rows: repeat(2, 1fr);
+   grid-column-gap: 0px;
+   grid-row-gap: 0px;
+
+   .div2 { grid-area: 1 / 1 / 3 / 5; }
+   .div3 { 
+      grid-area: 1 / 5 / 3 / 9; 
+
+      img{
+         width: 100%;
+         border-radius: 0.7rem;
+      }
+
+      h3{
+         text-align: center;
+         font-size: $h2;
+
+         span{
+            color: green;
+         }
+      }
+   }
+   .div4 { grid-area: 1 / 9 / 3 / 13; }
+
+   table, td, th {
+      text-align: center;
+      font-size: 142%;
+      padding: 1rem;
+      border: 3px solid $nav-background;
+   }
+
+   table{
+      width: 80%;
+      margin: 0 auto;
+      border-collapse: collapse;
+   }
+}
+
+.selection-area{
+   font-size: $default-text-size;
+   display: block;
+   width: 90%;
+   margin: 2rem auto;
+
+   label{
+      font-weight: bold;
+   }
+
+   option, select{
+      padding: .2rem;
+      font-size: $default-text-size;
+   }
+}
+
+.comments-area{
+   width: 60%;
+   margin: 2rem auto 0;
+
+   .comments-data{
+      margin-top: 2rem;
+      background: gray;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      display: flex;
+      color: #fff;
+
+      .user{
+         text-align: center;
+         flex-direction: row;
+         
+         i{
+            font-size: 6rem;
+            color: #000;
+            margin-bottom: 0.3rem;
+         }
+
+         h3{
+            font-size: 1.5rem;
+            color: #fff;
+         }
+      }
+
+      .settings{
+         text-align: center;
+         flex-direction: row;
+
+         a{
+            color: #fff;
+
+            i{
+               margin: auto;
+               padding: 1rem;
+               width: 40%;
+               font-size: 2rem;
+            }
+         }
+
+         a:hover{
+            color: $background;
+         }
+      }
+
+      .comments{
+         margin: auto;
+         width: 60%;
+         
+         font-size: 1.5rem;
+         padding: 10px;
+      }
+   }
+}
+
+.thankyou{
+   display: block;
+   position: absolute;
+   top: 40%;
+   left: 50%;
+   transform: translate(-50%, -40%);
+   width: 60%;
+   padding: 5rem;
+   background: rgba(36, 40, 44, 0.9);
+   color: #fff;
+   
+   h1{
+      color: $background;
+       margin-bottom: 2rem;
+   }
+
+   p:last-child{
+      margin-top: 1rem;
+      font-weight: bolder;
+      font-size: 1.6rem;
+      cursor: pointer;
+   }
+
+   p:last-child:hover{
+      color: $background-hover;
+   }
+}
+
+
+.text-center{
+   text-align: center;
+}
+
+.money{
+   text-align: center;
+   color: green;
+   padding: 1rem;
+}
+
+.user_settings{
+   display: flex;
+   width: 100%;
+   flex-direction: row;
+
+   .buttons-center{
+      .button{
+         font-size: 2.3rem;
+      }
+      .button:hover{
+         background: $background-hover;;
+      }
+   }
+
+   form{
+      margin-top: 1rem;
+   }
+
+   .input-center{
+
+      input[type=text], input[type=password]{
+         width: 60%;
+         display: block;
+         margin: 1rem auto;
+         padding: 0.3rem;
+         border-radius: 0.5rem;
+         border: 3px solid $nav-background;
+         font-size: $default-text-size;
+      }
+   }
+   
+
+   .left{
+      border-right: 3px solid $nav-background;
+
+      h1{
+         margin-bottom: 1rem;
+      }
+
+      input{
+         font-size: $h2;
+      }
+   }
+
+   .right{
+      table, td, th {
+         text-align: center;
+         font-size: 142%;
+         padding: 1rem;
+         border: 3px solid $nav-background;
+      }
+   
+      table{
+         width: 80%;
+         margin: 1rem auto;
+         border-collapse: collapse;
+      }
+   }
+   
+   .left, .right {
+      padding-top: 1rem;
+      width: 50%;
+   }
+}
+
+//add_car
+.add_car{
+   width: 80%;
+   display: block;
+   margin: 1rem auto;
+
+   h1{
+      font-size: 3rem;
+      padding: 1rem;
+   }
+
+   form{
+      text-align: center;
+
+      input, select{
+         width: 80%;
+         margin: 1rem;
+         padding: 1rem;
+         font-size: $h2;
+         border-radius: 0.5rem;
+         border: 1px solid black;
+         font-size: $default-text-size;
+      }
+
+      select{
+         width: 50%;
+      }
+
+      input[type="submit"]{
+         width: 30%;
+         background: $background;
+         color: #fff;
+         font-weight: bold;
+         
+      }
+
+      input[type="submit"]:hover{
+         background: $background-hover;
+      }
+   }
+}

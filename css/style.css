@@ -1,0 +1,406 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+/*Start dane*/
+/*End dane*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Acme", sans-serif;
+}
+
+.hidden {
+  display: none;
+  overflow: hidden;
+}
+
+.error {
+  font-size: 2rem;
+  padding: 1rem;
+  text-align: center;
+  color: #0b9164;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #8aa31c;
+}
+
+/* Start panel główny */
+.start-panel {
+  background: url("../img/rec_gtav32.jpg") no-repeat fixed center;
+  background-size: 100% auto;
+}
+.start-panel #login-panel, .start-panel #register-panel {
+  border-radius: 0.4rem;
+  background: rgba(36, 40, 44, 0.9);
+  padding: 3rem 2rem;
+  position: absolute;
+  width: 35%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.start-panel #login-panel h1, .start-panel #register-panel h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: 2rem;
+  color: #fff;
+}
+.start-panel #login-panel .buttons-center, .start-panel #register-panel .buttons-center {
+  text-align: center;
+  margin-top: 1rem;
+}
+.start-panel #login-panel .buttons-center .input-text, .start-panel #register-panel .buttons-center .input-text {
+  border-radius: 0.4rem;
+  width: 90%;
+  margin: 0.6rem auto;
+  padding: 0.5rem;
+  font-size: 2.4rem;
+}
+.start-panel #login-panel .buttons-center .input-button, .start-panel #register-panel .buttons-center .input-button {
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  font-size: 2.4rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  background: #0b9164;
+}
+.start-panel #login-panel .buttons-center .input-button:hover, .start-panel #register-panel .buttons-center .input-button:hover {
+  background: #8aa31c;
+}
+
+/* End panel główny */
+/* Start nav */
+nav {
+  background: #078585;
+  color: #d4af32;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: initial;
+  font-family: garamond;
+  text-shadow: #755704 2px 1px 1px;
+}
+nav i {
+  font-size: 1.8rem;
+}
+nav .back {
+  flex-grow: 30;
+}
+nav .logo {
+  text-align: center;
+  margin-right: 27%;
+  font-size: 4rem;
+  font-family: Impact;
+  text-shadow: #755704 2px 1px 1px;
+}
+nav .user {
+  text-align: right;
+  flex-grow: 1;
+  margin-right: 4%;
+}
+nav .back a, nav .user a {
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: #d4af32;
+  font-weight: bold;
+}
+nav .user > :hover, nav .back > a:hover {
+  color: #fff;
+}
+
+/*End nav */
+main {
+  font-size: 2.4rem;
+  width: 80%;
+  margin: 2rem auto 0;
+  text-align: center;
+}
+main .add_vehicle {
+  text-decoration: none;
+}
+main .add_vehicle button {
+  font-size: 2rem;
+  display: block;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  border: none;
+  color: #d1b226;
+  background: #0b9164;
+}
+main .add_vehicle button:hover {
+  background: #8aa31c;
+}
+main input {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+main .fas {
+  color: #0b9164;
+}
+main .fas:hover {
+  color: #8aa31c;
+}
+
+#new_comment {
+  padding: 0.2rem;
+  margin-top: 1rem;
+  font-size: 2.4rem;
+  width: 100%;
+  height: 8rem;
+}
+
+.buttons-center .button {
+  font-size: 2rem;
+  display: block;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  border: none;
+  color: #d4af32;
+  background: #0b9164;
+}
+.buttons-center #wynajmij, .buttons-center #wstaw {
+  font-size: 2rem;
+  display: block;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  background: #0b9164;
+}
+.buttons-center #wynajmij:hover, .buttons-center #wstaw:hover {
+  background: #8aa31c;
+}
+.buttons-center #wstaw {
+  margin-top: 1rem;
+}
+
+.parent {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.parent .div2 {
+  grid-area: 1/1/3/5;
+}
+.parent .div3 {
+  grid-area: 1/5/3/9;
+}
+.parent .div3 img {
+  width: 100%;
+  border-radius: 0.7rem;
+}
+.parent .div3 h3 {
+  text-align: center;
+  font-size: 2rem;
+}
+.parent .div3 h3 span {
+  color: green;
+}
+.parent .div4 {
+  grid-area: 1/9/3/13;
+}
+.parent table, .parent td, .parent th {
+  text-align: center;
+  font-size: 142%;
+  padding: 1rem;
+  border: 3px solid #078585;
+}
+.parent table {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.selection-area {
+  font-size: 2.4rem;
+  display: block;
+  width: 90%;
+  margin: 2rem auto;
+}
+.selection-area label {
+  font-weight: bold;
+}
+.selection-area option, .selection-area select {
+  padding: 0.2rem;
+  font-size: 2.4rem;
+}
+
+.comments-area {
+  width: 60%;
+  margin: 2rem auto 0;
+}
+.comments-area .comments-data {
+  margin-top: 2rem;
+  background: gray;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  color: #fff;
+}
+.comments-area .comments-data .user {
+  text-align: center;
+  flex-direction: row;
+}
+.comments-area .comments-data .user i {
+  font-size: 6rem;
+  color: #000;
+  margin-bottom: 0.3rem;
+}
+.comments-area .comments-data .user h3 {
+  font-size: 1.5rem;
+  color: #fff;
+}
+.comments-area .comments-data .settings {
+  text-align: center;
+  flex-direction: row;
+}
+.comments-area .comments-data .settings a {
+  color: #fff;
+}
+.comments-area .comments-data .settings a i {
+  margin: auto;
+  padding: 1rem;
+  width: 40%;
+  font-size: 2rem;
+}
+.comments-area .comments-data .settings a:hover {
+  color: #0b9164;
+}
+.comments-area .comments-data .comments {
+  margin: auto;
+  width: 60%;
+  font-size: 1.5rem;
+  padding: 10px;
+}
+
+.thankyou {
+  display: block;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  width: 60%;
+  padding: 5rem;
+  background: rgba(36, 40, 44, 0.9);
+  color: #fff;
+}
+.thankyou h1 {
+  color: #0b9164;
+  margin-bottom: 2rem;
+}
+.thankyou p:last-child {
+  margin-top: 1rem;
+  font-weight: bolder;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+.thankyou p:last-child:hover {
+  color: #8aa31c;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.money {
+  text-align: center;
+  color: green;
+  padding: 1rem;
+}
+
+.user_settings {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+}
+.user_settings .buttons-center .button {
+  font-size: 2.3rem;
+}
+.user_settings .buttons-center .button:hover {
+  background: #8aa31c;
+}
+.user_settings form {
+  margin-top: 1rem;
+}
+.user_settings .input-center input[type=text], .user_settings .input-center input[type=password] {
+  width: 60%;
+  display: block;
+  margin: 1rem auto;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  border: 3px solid #078585;
+  font-size: 2.4rem;
+}
+.user_settings .left {
+  border-right: 3px solid #078585;
+}
+.user_settings .left h1 {
+  margin-bottom: 1rem;
+}
+.user_settings .left input {
+  font-size: 2rem;
+}
+.user_settings .right table, .user_settings .right td, .user_settings .right th {
+  text-align: center;
+  font-size: 142%;
+  padding: 1rem;
+  border: 3px solid #078585;
+}
+.user_settings .right table {
+  width: 80%;
+  margin: 1rem auto;
+  border-collapse: collapse;
+}
+.user_settings .left, .user_settings .right {
+  padding-top: 1rem;
+  width: 50%;
+}
+
+.add_car {
+  width: 80%;
+  display: block;
+  margin: 1rem auto;
+}
+.add_car h1 {
+  font-size: 3rem;
+  padding: 1rem;
+}
+.add_car form {
+  text-align: center;
+}
+.add_car form input, .add_car form select {
+  width: 80%;
+  margin: 1rem;
+  padding: 1rem;
+  font-size: 2rem;
+  border-radius: 0.5rem;
+  border: 1px solid black;
+  font-size: 2.4rem;
+}
+.add_car form select {
+  width: 50%;
+}
+.add_car form input[type=submit] {
+  width: 30%;
+  background: #0b9164;
+  color: #fff;
+  font-weight: bold;
+}
+.add_car form input[type=submit]:hover {
+  background: #8aa31c;
+}
